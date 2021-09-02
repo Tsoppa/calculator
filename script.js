@@ -17,6 +17,11 @@ for (item of buttons) {
             case '√':
                 inputs = Math.sqrt(inputs);
                 screen.value = inputs;
+                if ((screen.value).includes('.', -10)) {
+                    screen.value = (screen.value).slice(0, 11);
+                } else {
+                    screen.value = (screen.value).slice(0, 10);
+                }
                 break;
             // case '±':
             //     if (screen.value.substring(0, 1) == "-") {
