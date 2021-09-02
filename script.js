@@ -26,7 +26,7 @@ for (item of buttons) {
             //     }
             //     break;
             case '^':
-                inputs += '**';
+                inputs = `${inputs ? `(${inputs})` : ``}` + '**';
                 screen.value = inputs;
                 break;
             case '÷':
