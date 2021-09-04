@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Montserrat, sans-serif;
+    outline: none;
+}
+body {
+    background: #2cc4fd;
+}
+.calculator-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(6, 90px);
+}
+.calculator-grid > button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid rgba(0, 0, 0, .75);
+    background-color: #fff;
+}
+.calculator-grid > button:hover {
+    background-color: rgba(255, 255, 255, .9);
+}
+.hori-two {
+    grid-column: span 2;
+}
+.vert-two {
+    grid-row: span 2;
+}
+.output {
+    grid-column: 1 / -1;
+    background-color: rgba(0, 0, 0, .75);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 12px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.output .current-operand {
+    color: white;
+    font-size: 2.5rem;
+}
+.current-operand input {
+    font-size: 55px;
+    display: inline-block;
+    padding: 15px 4px 0 4px;
+    border: none;
+    line-height: 70px;
+    text-align: right;
+    width: 375px;
+}
